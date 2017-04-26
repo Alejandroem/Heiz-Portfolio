@@ -4,8 +4,18 @@ $(document).ready(function(){
     $("#imgBrand").click(function(){
 
         $("#navBarMain").animateCss("fadeOutUp",false); 
-        $("#PageBio").animateCss("fadeOutRight",false);
-//        $("#pageGaleria").animateCss("fadeOutRight",false);
+
+        if($("#PageBio").hasClass("active")){
+            $("#PageBio").animateCss("fadeOutRight",false);
+            $("#PageBio").removeClass("active");
+        }
+        
+        if($("#pageGaleria").hasClass("active")){
+            $("#pageGaleria").animateCss("fadeOutRight",false);
+            $("#pageGaleria").removeClass("active");
+        }
+        
+        
         $("#footer").animateCss("fadeOutDown",false);
         setTimeout(function(){
             $("#footer").animateCss("fadeInUp",true);
@@ -23,9 +33,9 @@ $(document).ready(function(){
             $("#footer").animateCss("fadeInUp",true);
         },700);
         setTimeout(function(){
-            $("#PageBio").animateCss("fadeInRight",true);
             $("#navBarMain").animateCss("fadeInDown",true);
-
+            $("#PageBio").animateCss("fadeInRight",true);
+            $("#PageBio").addClass("active");
         },400);
 
     });
@@ -37,9 +47,9 @@ $(document).ready(function(){
             $("#footer").animateCss("fadeInUp",true);
         },700);
         setTimeout(function(){
-            $("#pageGaleria").animateCss("fadeInRight",true);
             $("#navBarMain").animateCss("fadeInDown",true);
-
+            $("#pageGaleria").animateCss("fadeInRight",true);
+            $("#pageGaleria").addClass("active");
         },400);
 
     });
