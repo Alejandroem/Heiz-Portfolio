@@ -10,7 +10,13 @@
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <script
+                src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/index.js"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -22,8 +28,10 @@
 
 
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-offset-2 col-md-8 header">
+
+            <!-- Nav Bar -->
+            <div id="navBarMain" class="row" hidden>
+                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 header">
                     <nav class="navbar navbar-default">
                         <div class="container-fluid">
                             <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,52 +42,154 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#">Brand</a>
+                                <img id="imgBrand" class="img img-responsive" src="images/logo.png">
                             </div>
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="active"><a href="#">Link</a></li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li ><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li role="separator" class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="active"><a href="#">Bio</a></li>
+                                    <li><a href="#">Galeria</a></li>
+                                    <li><a href="#">Investigación</a></li>
+                                    <li><a href="#">Estrategia</a></li>
+
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
                     </nav>
                 </div>
-
-
-                <!--Contenido principal-->
-                <div class="col-md-12">   
-                    Bla bla bla bio
-
-
-
-                </div>
-                <!--./contenido-principal-->
-
-
-                <!--footer-->
-                <div class="col-md-12">   
-                    Bla bla bla bio
-
-
-
-                </div>
-                <!--./footer-->
             </div>
+            <!--./ Nav Bar-->
+            <!--Menu principal -->
+            <div id="MenuPrincipal" class="row" style="margin-top:10%;">
+                <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-3">
+                    <img class="img-responsive" src="images/logo.png">
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-1 ">
+                    <ul class="indexMenu">
+                        <li id="bio">BIO</li>
+                        <li id="btnGaleria">GALERIA</li>
+                        <li>INVESTIGACIÓN</li>
+                        <li>ESTRATEGIA</li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--./Menu principal -->
+
+
+
+            <!--Contenido bio-->
+            <div id="PageBio" class="row" hidden>   
+                <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-3">
+                    <img class="img-responsive" src="images/bio1.jpg">
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0">
+                    <p class="Bio-Text" >
+                        Como diseñadora, realizo la creatividad y diseño de marca cuyo trabajo encapsula todos los esfuerzos en los productos para diversos clientes mientras cuento historias atractivas en la intersección de la ilustración y el marketing.
+                    </p>
+                </div>
+
+
+            </div>
+            <!--./contenido-bio-->
+
+            <!--Contenido galeria-->
+            <div id="pageGaleria" hidden>
+                <div  class="row rowGaleria">   
+                    <div class="col-md-2 col-xs-12 col-md-offset-3">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-2.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row rowGaleria">   
+                    <div class="col-md-2 col-xs-12 col-md-offset-3">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-2.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row rowGaleria">   
+                    <div class="col-md-2 col-xs-12 col-md-offset-3">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-2.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row rowGaleria">   
+                    <div class="col-md-2 col-xs-12 col-md-offset-3">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-2.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row rowGaleria">   
+                    <div class="col-md-2 col-xs-12 col-md-offset-3">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-2.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-2 col-xs-12 col-md-offset-0">
+                        <img src="images/work-1.jpg" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <!--./contenido-galeria-->
+
+
+            <!--footer-->
+            <div id="footer" class="footer" style="margin-top:10%;">
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-2">  
+                        <span class="text-center">© Copyright 2017</span>
+                    </div>
+                    <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0">  
+                        <span class="text-center">iheiz@icloud.com</span>
+                    </div>
+                    <div class="col-xs-6 col-md-2 col-md-offset-0 col-xs-offset-1">  
+                        <div class="row">
+                            <div class="col-md-2 col-xs-2 col-xs-offset-5">
+                                <img src="images/instagram.svg" class="" alt="instagram">
+                            </div>
+                            <div class="col-md-2 col-xs-2">
+                                <img src="images/behance-01.svg" class="" alt="behance">
+                            </div>
+                            <div class="col-md-2 col-xs-2">
+                                <img src="images/arroba.svg" class="" alt="mail">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!--./footer-->
 
 
         </div>
+
+
+
 
 
 

@@ -1,4 +1,657 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+}
 
+@font-face {
+    font-family: Furuta-PT-Bold;
+    src: url("../fonts/FuturaPTBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Furuta-PT-Book;
+    src: url("../fonts/FuturaPTBook.otf") format("opentype");
+}
+
+
+.aniBegin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99;
+}
+.contentFloat {
+    position: absolute;
+    display: none;
+    background: url("../images/AlphaBackground.png") center center;
+    left: 50%;
+    top: 50%;
+    z-index: 49;
+}
+.aniBegin .close, .contentFloat .close {
+    position: absolute;
+    cursor: pointer;
+    right: 13px;
+    top: 13px;
+    z-index: 100;
+    width: 26px;
+    height: 26px;
+    background: url("../images/closevideo.svg") left top;
+}
+
+
+
+
+
+
+.container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.pages-container { 
+    top: 0;
+    position: absolute;
+}
+.page-container{
+    position: relative;
+    float: left;
+    min-width: 800px;
+    min-height: 600px;
+    overflow: hidden;
+}
+.page-container .page {
+    /*border: 1px solid #000;*/
+    min-width: 1024px;
+    min-height: 768px;
+    /*padding: 30px 50px 30px 50px;*/
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: -384px 0 0 -512px;
+}
+
+.page-container .page .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 143px;
+    height: 89px;
+    margin: 196px 0 0 131px;
+    background: url("../images/logo.png") no-repeat top left;
+}
+.page-container .page .menuHome {
+    font-family: 'Furuta-PT-Bold', verdana;
+    font-size: 27.5px;
+    position: absolute;
+    top: 298px;
+    left: 404px;
+}
+.page-container .page .menuHome ul, .container .menuTop ul  {
+    list-style: none;
+    margin: 0 0 0 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+.page-container .page .menuHome li:hover, .container .menuTop li:hover {
+    text-decoration:line-through; 
+    color: #FFFF00;
+}
+
+.page-container .page .menuHome li span, .container .menuTop li span {
+    color: #000!important;
+}
+
+
+
+
+
+
+
+
+/*  UNIVERSAL  TOP MENU  */
+.container .click, .container span.email {
+    cursor: pointer;
+}
+.container .menuTop {
+    display: none;
+    font-family: 'Furuta-PT-Bold', verdana;
+    font-size: 20px;
+    /*	position: absolute;*/
+    /*	left: 0;*/
+    /*	top: 0;*/
+    margin: 71px 0 0 0;
+    /*	width: 100%;*/
+    /*	height: 51px;*/
+    z-index: 1;
+}
+.container .menuTop .logoSmall {
+    /*	float: left;*/
+    /*	width: 82px;*/
+    /*	height: 51px;*/
+    /*	margin: 0 0 0 69px;*/
+    background: url("../images/logoheiz.svg") no-repeat top left;
+}
+.container .menuTop ul {
+    float: right;
+}
+.container .menuTop ul li{
+/*    float: left;*/
+/*    margin: 0 64px 0 0;*/
+}
+/*  UNIVERSAL FOOTER   */
+.container .footer {
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 63px;
+    margin: 0 15%;
+    z-index: 1;
+}
+.container .footer .copyright {
+    float: left;
+    margin: 0 0;
+}
+.container .footer .email {
+    float: left;
+    margin: 0 0 0 25% ;
+}
+.container .footer .icon {
+    float: right;
+    width: 26px;
+    height: 26px;
+    margin: 0 0 0 17px;
+}
+.container .footer .icon.instagram {
+    background: url("../images/instagram.svg") no-repeat left top;
+}
+.container .footer .icon.be {
+    background: url("../images/behance-01.svg") no-repeat left top;
+}
+.container .footer .icon.mail {
+    background: url("../images/arroba.svg") no-repeat left top;
+}
+.container .footer .icon:hover{
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+
+/*   BIO PAGE   */
+.page-bio .page .photo {
+    position: absolute;
+    left: 67px;
+    top: 193px;
+    /*border: 1px solid #C7C7C7;*/
+    background: #FFFF00;
+    width: 417px;
+    height: 379px;
+}
+.page-bio .page .photo img {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border: 1px solid #C7C7C7;
+}
+.page-bio .page .biotext {
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 19px;
+    position: absolute;
+    left: 535px;
+    top: 266px;
+    width: 432px;
+}
+.page-bio .page .buttondown {
+    font-family: 'Furuta-PT-Book', verdana;
+    font-size: 15px;
+    position: absolute;
+    left: 541px;
+    top: 438px;
+    padding: 0 0 0 39px;
+    width: 109px;
+    height: 18px;
+    background: url("../images/icondown.png") no-repeat left top;
+}
+
+
+
+/*   GALLERY PAGE   */
+.page-galeria .page .gallery {
+    position: absolute;
+    left: 66px;
+    top: 205px;
+    width: 900px;
+    height: 330px;
+}
+
+.page-galeria .page .gallery .gaimg {
+    float: left;
+    margin: 0 0 15px 15px;
+    width: 250px;
+    height: 150px;
+    background-position: left top !important;
+}
+.page-galeria .page .gallery .gaimg:hover {
+    background-position: left bottom !important;
+}
+
+.contentFloat .contentload .contentgallery {
+    min-width: 886px;
+    min-height: 556px;
+    width: 886px;
+    height: 556px;
+
+    margin: 0 auto 0 auto;
+}
+
+.contentFloat .contentload  .gallerytitle {
+    font-family: 'Furuta-PT-Bold', verdana;
+    font-size: 25px;
+    margin: 50px 0 50px 0 ;
+    width: 886px;
+}
+.contentFloat  .contentload  .gallerytext {
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 12px;
+    float: left;
+    width: 465px;
+}
+.contentFloat .contentload  .galleryimage {
+    float: left;
+    width: 371px;
+    height: 354px;
+    margin: 0 50px 0 0;
+}
+
+.contentFloat .contentload  .buttondown, 
+.contentFloat .contentload  .buttondown:active,
+.contentFloat .contentload  .buttondown:hover, 
+.contentFloat .contentload  .buttondown:focus,
+.contentFloat .contentload  .buttondown:visited{
+    font-family: 'Furuta-PT-Book', verdana !important;
+    font-size: 15px;
+    display: block;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    padding: 0 0 0 39px;
+    margin: 35px 0 0 0;
+    width: 154px;
+    height: 18px;
+    background: url("../images/icondown.png") no-repeat left top;
+}
+
+
+
+
+
+/*   INVESTIGACIÓN PAGE   */
+.page-investigacion .page .investitle {
+    font-family: 'Furuta-PT-Bold', verdana;
+    font-size: 25px;
+    position: absolute;
+    left: 66px;
+    top: 205px;
+    /*width: 432px;*/
+}
+.page-investigacion .page .investext {
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 12px;
+    position: absolute;
+    left: 70px;
+    top: 296px;
+    width: 432px;
+}
+.page-investigacion .page .invesgallery {
+    position: absolute;
+    left: 541px;
+    top: 296px;
+    width: 410px;
+    height: 315px;
+}
+.page-investigacion .page .invesgallery .inimg1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.page-investigacion .page .invesgallery .inimg2 {
+    position: absolute;
+    left: 51px;
+    bottom: 0;
+}
+.page-investigacion .page .invesgallery .inimg3 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.page-investigacion .page .buttondown {
+    font-family: 'Furuta-PT-Book', verdana;
+    font-size: 15px;
+    position: absolute;
+    left: 72px;
+    top: 404px;
+    padding: 0 0 0 39px;
+    width: 154px;
+    height: 18px;
+    background: url("../images/icondown.png") no-repeat left top;
+}
+
+
+/*   ESTRATEGIA PAGE   */
+.page-estrategia .page .estrategiatitle {
+    font-family: 'Furuta-PT-Bold', verdana;
+    font-size: 25px;
+    position: absolute;
+    left: 67px;
+    top: 205px;
+    /*width: 432px;*/
+}
+.page-estrategia .page .estrategiatext {
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 12px;
+    position: absolute;
+    left: 520px;
+    top: 314px;
+    width: 432px;
+}
+
+.page-estrategia .page .estrategiagallery {
+    position: absolute;
+    left: 66px;
+    top: 314px;
+    width: 315px;
+    height: 270px;
+}
+
+.page-investigacion .page .estrategiagallery .esimg1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.page-investigacion .page .estrategiagallery .esimg2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.page-estrategia .page .buttondown {
+    font-family: 'Furuta-PT-Book', verdana;
+    font-size: 15px;
+    position: absolute;
+    left: 520px;
+    top: 422px;
+    padding: 0 0 0 39px;
+    width: 146px;
+    height: 18px;
+    background: url("../images/icondown.png") no-repeat left top;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************** SCROLLBAR BASE CSS ***************/
+
+.scroll-wrapper {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+    height: 330px;
+}
+
+.scroll-wrapper > .scroll-content {
+    border: none !important;
+    box-sizing: content-box !important;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-height: none;
+    max-width: none !important;
+    overflow: scroll !important;
+    padding: 0;
+    position: relative !important;
+    top: 0;
+    width: auto !important;
+}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.scroll-element {
+    display: none;
+}
+.scroll-element, .scroll-element div {
+    box-sizing: content-box;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+}
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+    cursor: default;
+}
+
+.scroll-textarea {
+    border: 1px solid #cccccc;
+    border-top-color: #999999;
+}
+.scroll-textarea > .scroll-content {
+    overflow: hidden !important;
+}
+.scroll-textarea > .scroll-content > textarea {
+    border: none !important;
+    box-sizing: border-box;
+    height: 100% !important;
+    margin: 0;
+    max-height: none !important;
+    max-width: none !important;
+    overflow: scroll !important;
+    outline: none;
+    padding: 2px;
+    position: relative !important;
+    top: 0;
+    width: 100% !important;
+}
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+
+
+
+/*************** SCROLLBAR MAC OS X ***************/
+
+.scrollbar-macosx > .scroll-element,
+.scrollbar-macosx > .scroll-element div
+{
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+.scrollbar-macosx > .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.scrollbar-macosx > .scroll-element .scroll-element_track { display: none; }
+.scrollbar-macosx > .scroll-element .scroll-bar {
+    background-color: #6C6E71;
+    display: block;
+
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    -ms-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+.scrollbar-macosx:hover > .scroll-element .scroll-bar,
+.scrollbar-macosx > .scroll-element.scroll-draggable .scroll-bar {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+
+.scrollbar-macosx > .scroll-element.scroll-x {
+    bottom: 0px;
+    height: 0px;
+    left: 0;
+    min-width: 100%;
+    overflow: visible;
+    width: 100%;
+}
+
+.scrollbar-macosx > .scroll-element.scroll-y {
+    height: 100%;
+    min-height: 100%;
+    right: 0px;
+    top: 0;
+    width: 0px;
+}
+
+/* scrollbar height/width & offset from container borders */
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-bar { height: 7px; min-width: 10px; top: -9px; }
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-bar { left: -9px; min-height: 10px; width: 7px; }
+
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_outer { left: 2px; }
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_size { left: -4px; }
+
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_outer { top: 2px; }
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_size { top: -4px; }
+
+/* update scrollbar offset if both scrolls are visible */
+.scrollbar-macosx > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -11px; }
+.scrollbar-macosx > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -11px; }
+
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 100px;
+    height: 100px;
+    padding-top: 0;
+}
 .header {
-    margin-top: 100px;
+    margin-top:25px;
+}
+/**********************************
+Responsive navbar-brand image CSS
+- Remove navbar-brand padding for firefox bug workaround
+- add 100% height and width auto ... similar to how bootstrap img-responsive class works
+***********************************/
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+}
+/* Transparent navbar*/
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+
+/*.navbar li { color: #000 }*/
+
+.indexMenu {
+    margin-top: 25%;
+    list-style: none;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    line-height: 40px;
+    font-family: 'Furuta-PT-Bold', verdana;
+    font-size: 27.5px;
+}
+
+.Bio-Text {
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 19px;
+    margin-top:50px;
+}
+
+
+#MenuPrincipal,#PageBio,#navBarMain,#footer {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 0.1s;
+/*  -webkit-animation-iteration-count: infinite;*/
+}
+
+
+#pageGaleria {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 320px;
+}
+
+.rowGaleria{
+    margin-bottom:15px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.tituloInv{
+    font-family: 'Furuta-PT-Bold', verdana;
+    font-size: 25px;
 }
