@@ -1,4 +1,13 @@
 $(document).ready(function(){
+    $("#imgBio").click(function(){
+        if($(this).hasClass("bio1")){
+            $(this).removeClass("bio1");
+            $(this).addClass("bio2");
+            $(this).attr("src","images/bio2.jpg");
+        }
+        
+    });
+
 
     $("body").css("overflow","hidden");
     $("#imgBrand").click(function(){
@@ -9,13 +18,13 @@ $(document).ready(function(){
             $("#PageBio").animateCss("fadeOutRight",false);
             $("#PageBio").removeClass("active");
         }
-        
+
         if($("#pageGaleria").hasClass("active")){
             $("#pageGaleria").animateCss("fadeOutRight",false);
             $("#pageGaleria").removeClass("active");
         }
-        
-        
+
+
         $("#footer").animateCss("fadeOutDown",false);
         setTimeout(function(){
             $("#footer").animateCss("fadeInUp",true);
