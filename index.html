@@ -5,18 +5,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Bootstrap 101 Template</title>
+        <title>Heiz Portfolio</title>
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <script
-                src="https://code.jquery.com/jquery-3.2.1.min.js"
-                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-                crossorigin="anonymous"></script>
+        <link href="css/animate.css" rel="stylesheet">
+        <!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+
+        <script src="js/jquery-3.2.1.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/index.js"></script>
+
+
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css">
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -31,8 +35,8 @@
 
             <!-- Nav Bar -->
             <div id="navBarMain" class="row" hidden>
-                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 header">
-                    <nav class="navbar navbar-default">
+                <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 header">
+                    <nav id="navMain" class="navbar navbar-default">
                         <div class="container-fluid">
                             <!-- Brand and toggle get grouped for better mobile display -->
                             <div class="navbar-header">
@@ -42,16 +46,16 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <img id="imgBrand" class="img img-responsive" src="images/logo.png">
+                                <img id="imgBrand" style="width:80px; margin-left:-15%;"class="img img-responsive" src="images/logo.png">
                             </div>
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="active"><a href="#">Bio</a></li>
-                                    <li><a href="#">Galeria</a></li>
-                                    <li><a href="#">Investigación</a></li>
-                                    <li><a href="#">Estrategia</a></li>
+                                <ul class="navText nav navbar-nav navbar-right">
+                                    <li class="navli" id="navBio"><a href="#">BIO</a></li>
+                                    <li class="navli" id="navGaleria"><a href="#">GALERIA</a></li>
+                                    <li class="navli" id="navInvestigacion"><a href="#">INVESTIGACIÓN</a></li>
+                                    <li class="navli" id="navEstrategia"><a href="#">ESTRATEGIA</a></li>
 
                                 </ul>
                             </div><!-- /.navbar-collapse -->
@@ -69,8 +73,8 @@
                     <ul class="indexMenu">
                         <li id="bio">BIO</li>
                         <li id="btnGaleria">GALERIA</li>
-                        <li>INVESTIGACIÓN</li>
-                        <li>ESTRATEGIA</li>
+                        <li id="btnInvestigacion">INVESTIGACIÓN</li>
+                        <li id="btnEstrategia">ESTRATEGIA</li>
                     </ul>
                 </div>
 
@@ -80,12 +84,17 @@
 
 
             <!--Contenido bio-->
-            <div id="PageBio" class="row" hidden>   
-                <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-3">
-                    <img id="imgBio" class="img-responsive bio1" src="images/bio1.jpg">
+            <div id="PageBio" class="row" style="margin-top:5%; "hidden>   
+                <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1">
+                    <img id="imgBio" class="img-responsive bio1 " src="images/bio1.jpg">
+                    <div class="row">
+                        <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-0">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0">
+                <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1">
                     <p class="Bio-Text" >
+                        <br><br>
                         Como diseñadora, realizo la creatividad y diseño de marca cuyo trabajo encapsula todos los esfuerzos en los productos para diversos clientes mientras cuento historias atractivas en la intersección de la ilustración y el marketing.
                     </p>
                 </div>
@@ -153,6 +162,133 @@
                 </div>
             </div>
             <!--./contenido-galeria-->
+
+            <!--Contenido Investigacion-->
+            <div id="pageInvestigacion" style="padding:0 0 0 1%" class="row" hidden>   
+                <div id="investigacion">
+                    <div class="row tituloInv">
+                        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+                            <p>
+                                Pintura digital de Nacho Yagüe en la ambientación<br>
+                                de escenarios para el videojuego Assassin’s Creed Unity
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row contInv">
+                        <div class="col-md-4 col-xs-10 col-md-offset-2 col-xs-offset-1">
+                            <p>
+                                Duis sit amet bibendum magna. Donec eget diam nisi. Cras auctor, sem et tempus aliquet, lorem metus porttitor nulla, vitae fermentum nisi arcu id mi. Nullam sit amet tellus et eros varius vulputate. Fusce ac tortor semper, sagittis massa vel, mattis risus. Cras ac neque ut tellus tristique facilisis sit amet vitae magna. Donec laoreet nulla in tortor bibendum, quis ullamcorper nulla vulputate.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-8 col-xs-12">
+                                    <div class="col-md-2 col-xs-2">
+                                        <img src="images/icondown.png">
+                                    </div>
+                                    <div class="col-md-10 col-xs-10">
+                                        <div class="click" style="margin-top:1.5px;">Descargar investigación</div>
+                                    </div>
+                                </div>
+                                <hr width="30%" style="margin-left:77px; margin-top:30px;">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-12 col-md-offset-0">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12" style="margin-bottom:15px;">
+                                    <div class="row" style="margin-bottom:15px;">
+                                        <div class="col-md-12 col-xs-12">
+                                            <a href="#myPopup1" data-rel="popup" data-position-to="window">
+                                                <img src="images/i1.jpg" class="img-responsive">
+                                            </a>
+                                            <div data-role="popup" id="myPopup1">
+                                                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/i1.jpg" class="img-responsive" alt="Skaret View">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8 col-xs-12" style="float:right;">
+                                            <a href="#myPopup2" data-rel="popup" data-position-to="window">
+                                                <img src="images/i2.jpg" class="img-responsive">
+                                            </a>
+                                            <div data-role="popup" id="myPopup2">
+                                                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/i2.jpg" class="img-responsive" alt="Skaret View">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-12">
+                                    <a href="#myPopup3" data-rel="popup" data-position-to="window">
+                                        <img src="images/i3.jpg" class="img-responsive" id="img3">
+                                    </a>
+                                    <div data-role="popup" id="myPopup3">
+                                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/i3.jpg" class="img-responsive" alt="Skaret View">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--./contenido-bio-->
+
+            <!--Contenido Estrategia-->
+            <div id="pageEstrategia"  style="padding:0 0 0 1%" class="row" hidden>   
+                <div id="estrategia">
+                    <div class="row tituloInv" id="tituloEst">
+                        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+                            <p>
+                                Apartamento Semilla 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row contInv">
+                        <div class="col-md-4 col-xs-12 col-md-offset-2 col-xs-offset-0">
+                            <div class="row">
+                                <div class="col-md-11 col-xs-12" style="margin-bottom:15px;">
+                                    <a href="#myPopup4" data-rel="popup" data-position-to="window">
+                                        <img src="images/e11.jpg" class="img-responsive">
+                                    </a>
+                                    <div data-role="popup" id="myPopup4">
+                                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/e11.jpg" class="img-responsive" alt="Skaret View">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-11 col-xs-12">
+                                    <a href="#myPopup5" data-rel="popup" data-position-to="window">
+                                        <img src="images/e22.jpg" class="img-responsive">
+                                    </a>
+                                    <div data-role="popup" id="myPopup5">
+                                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/e22.jpg" class="img-responsive" alt="Skaret View">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-12 col-md-offset-0"  id="textoEst">
+                            <p style="margin-top:130px;">
+                                Duis sit amet bibendum magna. Donec eget diam nisi. Cras auctor, sem et tempus aliquet, lorem metus porttitor nulla, vitae fermentum nisi arcu id mi. Nullam sit amet tellus et eros varius vulputate. Fusce ac tortor semper, sagittis massa vel, mattis risus. Cras ac neque ut tellus tristique facilisis sit amet vitae magna. Donec laoreet nulla in tortor bibendum, quis ullamcorper nulla vulputate.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-8 col-xs-12">
+                                    <div class="col-md-2 col-xs-2">
+                                        <img src="images/icondown.png">
+                                    </div>
+                                    <div class="col-md-10 col-xs-10">
+                                        <div class="click" style="margin-top:1.5px;">Descargar estrategia</div>
+                                    </div>
+                                </div>
+                                <hr width="22%" style="margin-left:88px; margin-top:30px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--./contenido-bio-->
 
 
             <!--footer-->

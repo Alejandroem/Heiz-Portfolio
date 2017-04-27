@@ -146,11 +146,11 @@
     float: right;
 }
 .container .menuTop ul li{
-/*    float: left;*/
-/*    margin: 0 64px 0 0;*/
+    /*    float: left;*/
+    /*    margin: 0 64px 0 0;*/
 }
 /*  UNIVERSAL FOOTER   */
-.container .footer {
+.container /*.footer*/ {
     font-family: 'Montserrat-Regular', verdana;
     font-size: 12px;
     position: absolute;
@@ -161,30 +161,30 @@
     margin: 0 15%;
     z-index: 1;
 }
-.container .footer .copyright {
+.container /*.footer */.copyright {
     float: left;
     margin: 0 0;
 }
-.container .footer .email {
+.container /*.footer*/ .email {
     float: left;
     margin: 0 0 0 25% ;
 }
-.container .footer .icon {
+.container /*.footer*/ .icon {
     float: right;
     width: 26px;
     height: 26px;
     margin: 0 0 0 17px;
 }
-.container .footer .icon.instagram {
+.container /*.footer*/ .icon.instagram {
     background: url("../images/instagram.svg") no-repeat left top;
 }
-.container .footer .icon.be {
+.container /*.footer */.icon.be {
     background: url("../images/behance-01.svg") no-repeat left top;
 }
-.container .footer .icon.mail {
+.container /*.footer*/ .icon.mail {
     background: url("../images/arroba.svg") no-repeat left top;
 }
-.container .footer .icon:hover{
+.container /*.footer*/ .icon:hover{
     opacity: 0.7;
     filter: alpha(opacity=70);
 }
@@ -584,12 +584,12 @@
 
 .navbar-brand,
 .navbar-nav li a {
-    line-height: 100px;
-    height: 100px;
+    line-height: 50px;
+    height: 50px;
     padding-top: 0;
 }
 .header {
-    margin-top:25px;
+    margin-top:40px;
 }
 /**********************************
 Responsive navbar-brand image CSS
@@ -601,14 +601,13 @@ Responsive navbar-brand image CSS
 }
 .navbar-brand>img {
     height: 100%;
-    padding: 15px;
     width: auto;
 }
 /* Transparent navbar*/
 .navbar {
-   background-color: transparent;
-   background: transparent;
-   border-color: transparent;
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
 }
 
 /*.navbar li { color: #000 }*/
@@ -630,17 +629,16 @@ Responsive navbar-brand image CSS
 }
 
 
-#MenuPrincipal,#PageBio,#navBarMain,#footer {
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-delay: 0.1s;
-/*  -webkit-animation-iteration-count: infinite;*/
+#MenuPrincipal,#PageBio,#pageGaleria,#navBarMain,#footer,#pageInvestigacion,#pageEstrategia {
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-delay: 0.0s;
+    /*  -webkit-animation-iteration-count: infinite;*/
 }
-
 
 #pageGaleria {
     overflow-x: hidden;
     overflow-y: scroll;
-    max-height: 320px;
+    max-height: 480px;
 }
 
 .rowGaleria{
@@ -651,7 +649,91 @@ Responsive navbar-brand image CSS
     display: none;
 }
 
+.navText {
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.body{
+    background-color: #F6F6F7;
+}
+
+.navbar-default .navbar-nav > .active{
+    color: #000;
+    background: #FEE400;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #000;
+    background: #FEE400;
+}
+
+
 .tituloInv{
     font-family: 'Furuta-PT-Bold', verdana;
     font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contInv{
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 12px;
+}
+
+@media all and (max-device-width: 800px){
+    p {
+        font-size: 18px;
+    }
+    #img3{
+        width: 100%;
+    }
+    #textoEst{
+        margin-top: -100px;
+    }
+
+}
+
+@media all and (max-device-width: 640px){
+    p {
+        font-size: 16px;
+    }
+    #img3{
+        width: 100%;
+    }
+    #textoEst{
+        margin-top: -100px;
+    }
+}
+
+@media all and (max-device-width: 320px){
+    p {
+        font-size: 10px;
+    }
+    #img3{
+        width: 100%;
+    }
+    #textoEst{
+        margin-top: -100px;
+    }
+    #tituloEst{
+        margin-bottom: 0px;
+    }
+}
+
+.navli {
+    margin-right: 70px;
+}
+
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+/*    background-color: #F6F6F7;*/
+    text-align: center;
+    font-family: 'Montserrat-Regular', verdana;
+    font-size: 12px;
 }
