@@ -7,7 +7,6 @@ var navsec = {
 };
 
 $(document).ready(function(){
-
     $(".nav a").on('click',function(){
         if($(window).width()<=1024){
             $(".navbar-toggle").click();
@@ -36,6 +35,7 @@ $(document).ready(function(){
     });
 
     $("#navGaleria").click(function(){
+
         animateFoter();
         var actual;
         for(var i=0; i< secciones.length; i++){
@@ -90,6 +90,12 @@ $(document).ready(function(){
     });
 
     function cascadeToLeft(actual, dest){
+
+        if(navsec[secciones[actual]]=="#pageGaleria"&&!$("#pageGaleria").is(":visible")){
+            $("#pageGaleriaAumentada").hide();
+            $("#pageGaleria").show();
+        }
+
         console.log("der to izq"+actual+dest);
         if(actual==dest)
             return;
@@ -120,6 +126,12 @@ $(document).ready(function(){
     }
 
     function cascadeToRight(actual, dest){
+        if(navsec[secciones[actual]]=="#pageGaleria"&&!$("#pageGaleria").is(":visible")){
+            $("#pageGaleriaAumentada").hide();
+            $("#pageGaleria").show();
+        }
+
+
         console.log("izq to der"+actual+dest);
         if(actual==dest)
             return;

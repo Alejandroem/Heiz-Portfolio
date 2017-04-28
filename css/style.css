@@ -732,8 +732,37 @@ Responsive navbar-brand image CSS
     bottom: 0;
     left: 0;
     padding: 1rem;
-/*    background-color: #F6F6F7;*/
+    /*    background-color: #F6F6F7;*/
     text-align: center;
     font-family: 'Montserrat-Regular', verdana;
     font-size: 12px;
 }
+
+/*
+
+#thumbwrap {
+    margin:75px auto;
+    width:252px; height:252px;
+}
+.thumb {
+    float:left;  
+    position:relative;
+    margin:3px;
+}
+.thumb img { 
+    border:1px solid #000;
+    vertical-align:bottom;
+}
+.thumb:hover {
+    border:0; 
+    z-index:1;
+}
+.thumb span { 
+    position:absolute;
+    visibility:hidden;
+}
+.thumb:hover span { 
+    visibility:visible;
+    top:0; left:0; 
+}
+*/

@@ -16,11 +16,12 @@
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/galeria.js"></script>
 
-
-        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css">
-        <script src="js/jquery-1.11.3.js"></script>
-        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <!--
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css">
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>-->
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -106,62 +107,104 @@
             <!--Contenido galeria-->
             <div id="pageGaleria" hidden>
                 <div  class="row rowGaleria">   
-                    <div class="col-md-2 col-xs-12 col-md-offset-3">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                    <div class="col-xs-12 col-xs-offset-0 col-md-2 col-md-offset-3">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g1">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-2.jpg" class="img-responsive">
+                        <img src="images/work-2.jpg" class="img-responsive" id="g2">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g3">
                     </div>
                 </div>
                 <div class="row rowGaleria">   
                     <div class="col-md-2 col-xs-12 col-md-offset-3">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g4">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-2.jpg" class="img-responsive">
+                        <img src="images/work-2.jpg" class="img-responsive" id="g5">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g6">
                     </div>
                 </div>
                 <div class="row rowGaleria">   
                     <div class="col-md-2 col-xs-12 col-md-offset-3">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g7">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-2.jpg" class="img-responsive">
+                        <img src="images/work-2.jpg" class="img-responsive" id="g8">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g9">
                     </div>
                 </div>
                 <div class="row rowGaleria">   
                     <div class="col-md-2 col-xs-12 col-md-offset-3">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g10">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-2.jpg" class="img-responsive">
+                        <img src="images/work-2.jpg" class="img-responsive" id="g11">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g12">
                     </div>
                 </div>
                 <div class="row rowGaleria">   
                     <div class="col-md-2 col-xs-12 col-md-offset-3">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g13">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-2.jpg" class="img-responsive">
+                        <img src="images/work-2.jpg" class="img-responsive" id="g14">
                     </div>
                     <div class="col-md-2 col-xs-12 col-md-offset-0">
-                        <img src="images/work-1.jpg" class="img-responsive">
+                        <img src="images/work-1.jpg" class="img-responsive" id="g15">
                     </div>
                 </div>
             </div>
             <!--./contenido-galeria-->
+
+            <!--Contenido galeria aumentada-->
+            <div id="pageGaleriaAumentada" style="padding:0 0 0 1%" class="row" hidden>   
+                <div id="galeriaAumentada">
+
+                    <div class="row contInv">
+                        <div class="col-md-6 col-xs-10 col-md-offset-1 col-xs-offset-1" id="divImagen">
+
+                        </div>
+                        <div class="col-xs-12 col-xs-offset-1 col-md-4 col-md-offset-0">
+                            <div class="row tituloInv">
+                                <div class="col-xs-10 col-md-12" id="tituloImg">
+
+                                </div>
+                            </div>
+                            <p style="margin-right:20%;">
+                                Duis sit amet bibendum magna. Donec eget diam nisi. Cras auctor, sem et tempus aliquet, lorem metus porttitor nulla, vitae fermentum nisi arcu id mi. Nullam sit amet tellus et eros varius vulputate. Fusce ac tortor semper, sagittis massa vel, mattis risus. Cras ac neque ut tellus tristique facilisis sit amet vitae magna. Donec laoreet nulla in tortor bibendum, quis ullamcorper nulla vulputate.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-8 col-xs-12">
+                                    <div class="col-md-2 col-xs-2">
+                                        <img src="images/icondown.png">
+                                    </div>
+                                    <div class="col-md-10 col-xs-10">
+                                        <div class="click" style="margin-top:1.5px;">
+                                            <a href="asignacion2ndoSemestre2016.pdf" target="_blank" download>Descargar ficha técnica</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr width="30%" style="margin-left:77px; margin-top:30px;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--./contenido-galeria aumentada-->
+
+
 
             <!--Contenido Investigacion-->
             <div id="pageInvestigacion" style="padding:0 0 0 1%" class="row" hidden>   
@@ -175,7 +218,7 @@
                         </div>
                     </div>
                     <div class="row contInv">
-                        <div class="col-md-4 col-xs-10 col-md-offset-2 col-xs-offset-1">
+                        <div class="col-md-4 col-xs-10 col-md-offset-1 col-xs-offset-1">
                             <p>
                                 Duis sit amet bibendum magna. Donec eget diam nisi. Cras auctor, sem et tempus aliquet, lorem metus porttitor nulla, vitae fermentum nisi arcu id mi. Nullam sit amet tellus et eros varius vulputate. Fusce ac tortor semper, sagittis massa vel, mattis risus. Cras ac neque ut tellus tristique facilisis sit amet vitae magna. Donec laoreet nulla in tortor bibendum, quis ullamcorper nulla vulputate.
                             </p>
@@ -196,32 +239,27 @@
                                 <div class="col-md-6 col-xs-12" style="margin-bottom:15px;">
                                     <div class="row" style="margin-bottom:15px;">
                                         <div class="col-md-12 col-xs-12">
-                                            <a href="#myPopup1" data-rel="popup" data-position-to="window">
-                                                <img src="images/i1.jpg" class="img-responsive">
-                                            </a>
-                                            <div data-role="popup" id="myPopup1">
-                                                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/i1.jpg" class="img-responsive" alt="Skaret View">
-                                            </div>
+
+                                            <img src="images/i1.jpg" class="thumb img-responsive">
+                                            <!-- <a class="thumb" href="#">
+<img class="img-responsive" src="images/i1.jpg" alt="">
+<span>
+<img src="images/i1.jpg" alt="">
+</span>
+</a>-->
+
+
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-8 col-xs-12" style="float:right;">
-                                            <a href="#myPopup2" data-rel="popup" data-position-to="window">
-                                                <img src="images/i2.jpg" class="img-responsive">
-                                            </a>
-                                            <div data-role="popup" id="myPopup2">
-                                                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/i2.jpg" class="img-responsive" alt="Skaret View">
-                                            </div>
+                                            <img src="images/i2.jpg" style="padding:0 0 0 5%;"class="img-responsive">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-xs-12">
-                                    <a href="#myPopup3" data-rel="popup" data-position-to="window">
-                                        <img src="images/i3.jpg" class="img-responsive" id="img3">
-                                    </a>
-                                    <div data-role="popup" id="myPopup3">
-                                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/i3.jpg" class="img-responsive" alt="Skaret View">
-                                    </div>
+                                    <img src="images/i3.jpg" class="img-responsive" id="img3">
+
 
                                 </div>
                             </div>
@@ -245,81 +283,71 @@
                         </div>
                     </div>
                     <div class="row contInv">
-                        <div class="col-md-4 col-xs-12 col-md-offset-2 col-xs-offset-0">
+                        <div class="col-md-4 col-xs-12 col-md-offset-1 col-xs-offset-0">
                             <div class="row">
                                 <div class="col-md-11 col-xs-12" style="margin-bottom:15px;">
-                                    <a href="#myPopup4" data-rel="popup" data-position-to="window">
-                                        <img src="images/e11.jpg" class="img-responsive">
-                                    </a>
-                                    <div data-role="popup" id="myPopup4">
-                                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/e11.jpg" class="img-responsive" alt="Skaret View">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-11 col-xs-12">
-                                    <a href="#myPopup5" data-rel="popup" data-position-to="window">
-                                        <img src="images/e22.jpg" class="img-responsive">
-                                    </a>
-                                    <div data-role="popup" id="myPopup5">
-                                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/e22.jpg" class="img-responsive" alt="Skaret View">
-                                    </div>
-                                </div>
+                                    <img src="images/e11.jpg" class="img-responsive">                                    </a>
                             </div>
                         </div>
-                        <div class="col-md-5 col-xs-12 col-md-offset-0"  id="textoEst">
-                            <p style="margin-top:130px;">
-                                Duis sit amet bibendum magna. Donec eget diam nisi. Cras auctor, sem et tempus aliquet, lorem metus porttitor nulla, vitae fermentum nisi arcu id mi. Nullam sit amet tellus et eros varius vulputate. Fusce ac tortor semper, sagittis massa vel, mattis risus. Cras ac neque ut tellus tristique facilisis sit amet vitae magna. Donec laoreet nulla in tortor bibendum, quis ullamcorper nulla vulputate.
-                            </p>
-                            <div class="row">
-                                <div class="col-md-8 col-xs-12">
-                                    <div class="col-md-2 col-xs-2">
-                                        <img src="images/icondown.png">
-                                    </div>
-                                    <div class="col-md-10 col-xs-10">
-                                        <div class="click" style="margin-top:1.5px;">Descargar estrategia</div>
-                                    </div>
-                                </div>
-                                <hr width="22%" style="margin-left:88px; margin-top:30px;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <!--./contenido-bio-->
-
-
-            <!--footer-->
-            <div id="footer" class="footer" style="margin-top:10%;">
-                <div class="row">
-                    <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-2">  
-                        <span class="text-center">© Copyright 2017</span>
-                    </div>
-                    <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0">  
-                        <span class="text-center">iheiz@icloud.com</span>
-                    </div>
-                    <div class="col-xs-6 col-md-2 col-md-offset-0 col-xs-offset-1">  
                         <div class="row">
-                            <div class="col-md-2 col-xs-2 col-xs-offset-5">
-                                <img src="images/instagram.svg" class="" alt="instagram">
-                            </div>
-                            <div class="col-md-2 col-xs-2">
-                                <img src="images/behance-01.svg" class="" alt="behance">
-                            </div>
-                            <div class="col-md-2 col-xs-2">
-                                <img src="images/arroba.svg" class="" alt="mail">
+                            <div class="col-md-11 col-xs-12">
+                                <img src="images/e22.jpg" class="img-responsive">
                             </div>
                         </div>
-
-
-
+                    </div>
+                    <div class="col-md-5 col-xs-12 col-md-offset-0"  id="textoEst">
+                        <p style="margin-top:130px;">
+                            Duis sit amet bibendum magna. Donec eget diam nisi. Cras auctor, sem et tempus aliquet, lorem metus porttitor nulla, vitae fermentum nisi arcu id mi. Nullam sit amet tellus et eros varius vulputate. Fusce ac tortor semper, sagittis massa vel, mattis risus. Cras ac neque ut tellus tristique facilisis sit amet vitae magna. Donec laoreet nulla in tortor bibendum, quis ullamcorper nulla vulputate.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-8 col-xs-12">
+                                <div class="col-md-2 col-xs-2">
+                                    <img src="images/icondown.png">
+                                </div>
+                                <div class="col-md-10 col-xs-10">
+                                    <div class="click" style="margin-top:1.5px;">Descargar estrategia</div>
+                                </div>
+                            </div>
+                            <hr width="22%" style="margin-left:88px; margin-top:30px;">
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!--./footer-->
+
+        </div>
+        <!--./contenido-bio-->
+
+
+        <!--footer-->
+        <div id="footer" class="footer" style="margin-top:10%;">
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-2">  
+                    <span class="text-center">© Copyright 2017</span>
+                </div>
+                <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0">  
+                    <span class="text-center">iheiz@icloud.com</span>
+                </div>
+                <div class="col-xs-6 col-md-2 col-md-offset-0 col-xs-offset-1">  
+                    <div class="row">
+                        <div class="col-md-2 col-xs-2 col-xs-offset-5">
+                            <img src="images/instagram.svg" class="" alt="instagram">
+                        </div>
+                        <div class="col-md-2 col-xs-2">
+                            <img src="images/behance-01.svg" class="" alt="behance">
+                        </div>
+                        <div class="col-md-2 col-xs-2">
+                            <img src="images/arroba.svg" class="" alt="mail">
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!--./footer-->
 
 
         </div>
@@ -329,9 +357,9 @@
 
 
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
